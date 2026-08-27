@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Planner</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f3ef;
+            color: #332b27;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #776b64;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .task {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .task input {
+            width: 18px;
+            height: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 12px;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .goal {
+            padding: 12px;
+            background: #f7f3ef;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 700px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>My Planner</h1>
-    <p>Welcome to my personal planner!</p>
+<div class="container">
+
+    <header>
+        <h1>My Planner ✨</h1>
+        <p>Stay organized. Stay focused. Keep going.</p>
+    </header>
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>✅ Today's Tasks</h2>
+
+            <div class="task">
+                <input type="checkbox">
+                <span>Finish school work</span>
+            </div>
+
+            <div class="task">
+                <input type="checkbox">
+                <span>Study for upcoming test</span>
+            </div>
+
+            <div class="task">
+                <input type="checkbox">
+                <span>Work on personal goals</span>
+            </div>
+
+            <div class="task">
+                <input type="checkbox">
+                <span>Organize tomorrow</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎯 My Goals</h2>
+
+            <div class="goal">School & Learning</div>
+            <div class="goal">Personal Growth</div>
+            <div class="goal">Creative Projects</div>
+            <div class="goal">Future Goals</div>
+        </div>
+
+        <div class="card">
+            <h2>📝 Notes</h2>
+            <textarea placeholder="Write anything you need to remember..."></textarea>
+        </div>
+
+        <div class="card">
+            <h2>🌱 Daily Reminder</h2>
+            <p>
+                You don't have to do everything at once.
+                Just focus on the next step.
+            </p>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
